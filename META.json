@@ -1,5 +1,5 @@
 {
-   "abstract" : "An intestring approach to localize concise time druation string representation.",
+   "abstract" : "An interesting approach to localize concise time duration string representation.",
    "author" : [
       "Binary.com <perl@binary.com>"
    ],
@@ -26,6 +26,8 @@
             "Module::Runtime" : "0",
             "Moo" : "0",
             "POSIX" : "0",
+            "Test::Exception" : "0",
+            "Test::FailWarnings" : "0",
             "Test::More" : "0",
             "Time::Seconds" : "0"
          }
@@ -42,5 +44,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "version" : "0.02"
 }
