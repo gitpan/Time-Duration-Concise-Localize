@@ -3,3 +3,6 @@ Revision history for Time-Duration-Concise-Localize
 0.01    18/06/2014
         First version, released on cpan.
 
+0.02    26/06/2014
+        Fix makefile, we need Time::Second 1.27 version
+

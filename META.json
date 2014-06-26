@@ -29,7 +29,7 @@
             "Test::Exception" : "0",
             "Test::FailWarnings" : "0",
             "Test::More" : "0",
-            "Time::Seconds" : "0"
+            "Time::Seconds" : "1.27"
          }
       },
       "configure" : {
@@ -44,5 +44,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.02"
+   "version" : "0.03"
 }
