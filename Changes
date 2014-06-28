@@ -3,6 +3,13 @@ Revision history for Time-Duration-Concise-Localize
 0.01    18/06/2014
         First version, released on cpan.
 
-0.02    26/06/2014
+0.02    19/06/2014
+        Fix cpan failed test reports
+
+0.03    26/06/2014
         Fix makefile, we need Time::Second 1.27 version
 
+0.04    28/06/2014
+        Various improvements, now if time concise format is just number, we assume it is seconds
+        as_concise_string method will rebuild time concise format
+        normalized_code code is part of consie module, instead of Localize. That's the better place.
