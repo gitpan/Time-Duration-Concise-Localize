@@ -30,4 +30,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize
   homepage: https://github.com/binary-com/perl-Time-Duration-Concise-Localize
-version: '0.08'
+version: '0.09'
