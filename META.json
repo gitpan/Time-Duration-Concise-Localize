@@ -37,8 +37,8 @@
          "requires" : {
             "Carp" : "0",
             "Module::Runtime" : "0",
-            "Moo" : "0",
             "POSIX" : "0",
+            "Tie::Hash::LRU" : "0",
             "Time::Seconds" : "1.27",
             "perl" : "5.006"
          }
@@ -51,5 +51,5 @@
       },
       "homepage" : "https://github.com/binary-com/perl-Time-Duration-Concise-Localize"
    },
-   "version" : "1.0"
+   "version" : "1.1"
 }
