@@ -22,11 +22,11 @@ Time::Duration::Concise is an improved approach to convert concise time duration
 
 =head1 VERSION
 
-Version 0.09
+Version 1.0
 
 =cut
 
-our $VERSION = '0.09';
+our $VERSION = '1.0';
 
 our %LENGTH_TO_PERIOD = (
     86400 => 'day',
@@ -374,7 +374,7 @@ sub new {
     my $interval = $params_ref{'interval'};
 
     confess "Missing required arguments"
-      unless $interval;
+      unless defined $interval;
 
     if ( $popular{$interval} ) {
         ## Helps in multiple calling, it would really save the time
