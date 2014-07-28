@@ -204,12 +204,14 @@ Concise time druation to conscise string representation.
 
 sub as_concise_string {
     my ( $self, $precision ) = @_;
+    $precision ||= 10;
     my $time_frames         = $self->_duration_array($precision);
     my @concise_time_frames = map {
         $_ =~ s/\s+//ig;
         $_ =~ /([-|\+]?\d+[A-Za-z]{1})/ig;
         $1;
     } @$time_frames;
+    $self->{"_duration_array_$precision"} = undef;
     return join( '', @concise_time_frames );
 }
 
