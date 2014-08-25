@@ -3,6 +3,7 @@ abstract: 'An interesting approach to localize concise time duration string repr
 author:
   - 'Binary.com <perl@binary.com>'
 build_requires:
+  Module::Runtime: '0'
   Test::Exception: '0'
   Test::FailWarnings: '0'
   Test::More: '0'
@@ -31,4 +32,4 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize
   homepage: https://github.com/binary-com/perl-Time-Duration-Concise-Localize
-version: '1.6'
+version: '1.7'

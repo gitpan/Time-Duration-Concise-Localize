@@ -22,6 +22,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Module::Runtime" : "0",
             "Test::Exception" : "0",
             "Test::FailWarnings" : "0",
             "Test::More" : "0",
@@ -52,5 +53,5 @@
       },
       "homepage" : "https://github.com/binary-com/perl-Time-Duration-Concise-Localize"
    },
-   "version" : "1.6"
+   "version" : "1.7"
 }
