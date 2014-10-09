@@ -1,5 +1,5 @@
 {
-   "abstract" : "An interesting approach to localize concise time duration string representation.",
+   "abstract" : "localize concise time duration string representation.",
    "author" : [
       "Binary.com <perl@binary.com>"
    ],
@@ -22,7 +22,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Module::Runtime" : "0",
+            "Module::Pluggable" : "0",
             "Test::Exception" : "0",
             "Test::FailWarnings" : "0",
             "Test::More" : "0",
@@ -38,7 +38,7 @@
       "runtime" : {
          "requires" : {
             "Carp" : "0",
-            "Module::Runtime" : "0",
+            "Module::Pluggable" : "0",
             "POSIX" : "0",
             "Tie::Hash::LRU" : "0",
             "Time::Seconds" : "1.27",
@@ -53,5 +53,5 @@
       },
       "homepage" : "https://github.com/binary-com/perl-Time-Duration-Concise-Localize"
    },
-   "version" : "1.8"
+   "version" : "1.9"
 }
