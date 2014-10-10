@@ -46,3 +46,6 @@ Revision history for Time-Duration-Concise-Localize
 
 1.9     09/10/2014
         Use inbuild translation files to localize concise string.
+
+2.0     10/10/2014
+        bug fixes
