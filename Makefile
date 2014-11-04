@@ -13,14 +13,14 @@
 
 #     ABSTRACT_FROM => q[lib/Time/Duration/Concise/Localize.pm]
 #     AUTHOR => [q[Binary.com <perl@binary.com>]]
-#     BUILD_REQUIRES => { Test::NoWarnings=>q[0], Test::More=>q[0], Module::Pluggable=>q[0], Test::FailWarnings=>q[0], Test::Exception=>q[0], Time::Seconds=>q[1.27] }
+#     BUILD_REQUIRES => { Time::Seconds=>q[1.27], Test::More=>q[0], Test::FailWarnings=>q[0], Test::Exception=>q[0], Test::NoWarnings=>q[0], Module::Pluggable=>q[0] }
 #     CONFIGURE_REQUIRES => { ExtUtils::MakeMaker=>q[0] }
 #     LICENSE => q[Artistic_2_0]
-#     META_ADD => { resources=>{ homepage=>q[https://github.com/binary-com/perl-Time-Duration-Concise-Localize], repository=>q[git@github.com:binary-com/perl-Time-Duration-Concise-Localize.git], bugtracker=>q[http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize] } }
+#     META_ADD => { resources=>{ bugtracker=>q[http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize], repository=>q[git@github.com:binary-com/perl-Time-Duration-Concise-Localize.git], homepage=>q[https://github.com/binary-com/perl-Time-Duration-Concise-Localize] } }
 #     MIN_PERL_VERSION => q[5.006]
 #     NAME => q[Time::Duration::Concise::Localize]
 #     PL_FILES => {  }
-#     PREREQ_PM => { Test::More=>q[0], Test::NoWarnings=>q[0], Module::Pluggable=>q[0], Test::FailWarnings=>q[0], Tie::Hash::LRU=>q[0], POSIX=>q[0], Carp=>q[0], Test::Exception=>q[0], Time::Seconds=>q[1.27] }
+#     PREREQ_PM => { Test::FailWarnings=>q[0], Test::More=>q[0], Time::Seconds=>q[1.27], Test::Exception=>q[0], Test::NoWarnings=>q[0], POSIX=>q[0], Tie::Hash::LRU=>q[0], Carp=>q[0], Module::Pluggable=>q[0] }
 #     TEST_REQUIRES => {  }
 #     VERSION_FROM => q[lib/Time/Duration/Concise/Localize.pm]
 #     clean => { FILES=>q[Time-Duration-Concise-Localize-*] }
@@ -63,11 +63,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Time::Duration::Concise::Localize
 NAME_SYM = Time_Duration_Concise_Localize
-VERSION = 2.2
+VERSION = 2.3
 VERSION_MACRO = VERSION
-VERSION_SYM = 2_2
+VERSION_SYM = 2_3
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 2.2
+XS_VERSION = 2.3
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -217,32 +217,32 @@ TO_INST_PM = lib/Time/Duration/Concise.pm \
 
 PM_TO_BLIB = lib/Time/Duration/Concise/Locale/es.pm \
 	blib/lib/Time/Duration/Concise/Locale/es.pm \
-	lib/Time/Duration/Concise/Locale/pt.pm \
-	blib/lib/Time/Duration/Concise/Locale/pt.pm \
-	lib/Time/Duration/Concise/Locale/hi.pm \
-	blib/lib/Time/Duration/Concise/Locale/hi.pm \
-	lib/Time/Duration/Concise/Localize.pm \
-	blib/lib/Time/Duration/Concise/Localize.pm \
-	lib/Time/Duration/Concise/Locale/ja.pm \
-	blib/lib/Time/Duration/Concise/Locale/ja.pm \
-	lib/Time/Duration/Concise/Locale/pl.pm \
-	blib/lib/Time/Duration/Concise/Locale/pl.pm \
-	lib/Time/Duration/Concise/Locale/id.pm \
-	blib/lib/Time/Duration/Concise/Locale/id.pm \
 	lib/Time/Duration/Concise/Locale/de.pm \
 	blib/lib/Time/Duration/Concise/Locale/de.pm \
+	lib/Time/Duration/Concise/Locale/id.pm \
+	blib/lib/Time/Duration/Concise/Locale/id.pm \
 	lib/Time/Duration/Concise/Locale/ms.pm \
 	blib/lib/Time/Duration/Concise/Locale/ms.pm \
-	lib/Time/Duration/Concise/Locale/zh_cn.pm \
-	blib/lib/Time/Duration/Concise/Locale/zh_cn.pm \
-	lib/Time/Duration/Concise/Locale/ar.pm \
-	blib/lib/Time/Duration/Concise/Locale/ar.pm \
 	lib/Time/Duration/Concise/Locale/fr.pm \
 	blib/lib/Time/Duration/Concise/Locale/fr.pm \
+	lib/Time/Duration/Concise/Locale/pl.pm \
+	blib/lib/Time/Duration/Concise/Locale/pl.pm \
+	lib/Time/Duration/Concise/Locale/hi.pm \
+	blib/lib/Time/Duration/Concise/Locale/hi.pm \
+	lib/Time/Duration/Concise/Locale/pt.pm \
+	blib/lib/Time/Duration/Concise/Locale/pt.pm \
 	lib/Time/Duration/Concise/Locale/ru.pm \
 	blib/lib/Time/Duration/Concise/Locale/ru.pm \
+	lib/Time/Duration/Concise/Locale/ar.pm \
+	blib/lib/Time/Duration/Concise/Locale/ar.pm \
 	lib/Time/Duration/Concise.pm \
-	blib/lib/Time/Duration/Concise.pm
+	blib/lib/Time/Duration/Concise.pm \
+	lib/Time/Duration/Concise/Locale/ja.pm \
+	blib/lib/Time/Duration/Concise/Locale/ja.pm \
+	lib/Time/Duration/Concise/Localize.pm \
+	blib/lib/Time/Duration/Concise/Localize.pm \
+	lib/Time/Duration/Concise/Locale/zh_cn.pm \
+	blib/lib/Time/Duration/Concise/Locale/zh_cn.pm
 
 
 # --- MakeMaker platform_constants section:
@@ -311,7 +311,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Time-Duration-Concise-Localize
-DISTVNAME = Time-Duration-Concise-Localize-2.2
+DISTVNAME = Time-Duration-Concise-Localize-2.3
 
 
 # --- MakeMaker macro section:
@@ -465,35 +465,35 @@ POD2MAN = $(POD2MAN_EXE)
 
 
 manifypods : pure_all  \
+	lib/Time/Duration/Concise/Locale/hi.pm \
+	lib/Time/Duration/Concise/Locale/pl.pm \
+	lib/Time/Duration/Concise/Locale/ru.pm \
+	lib/Time/Duration/Concise/Locale/pt.pm \
+	lib/Time/Duration/Concise/Locale/ar.pm \
+	lib/Time/Duration/Concise.pm \
+	lib/Time/Duration/Concise/Localize.pm \
+	lib/Time/Duration/Concise/Locale/zh_cn.pm \
+	lib/Time/Duration/Concise/Locale/ja.pm \
 	lib/Time/Duration/Concise/Locale/de.pm \
+	lib/Time/Duration/Concise/Locale/es.pm \
 	lib/Time/Duration/Concise/Locale/id.pm \
 	lib/Time/Duration/Concise/Locale/ms.pm \
-	lib/Time/Duration/Concise/Locale/zh_cn.pm \
-	lib/Time/Duration/Concise/Locale/ar.pm \
-	lib/Time/Duration/Concise/Locale/fr.pm \
-	lib/Time/Duration/Concise/Locale/ru.pm \
-	lib/Time/Duration/Concise.pm \
-	lib/Time/Duration/Concise/Locale/pt.pm \
-	lib/Time/Duration/Concise/Locale/es.pm \
-	lib/Time/Duration/Concise/Locale/hi.pm \
-	lib/Time/Duration/Concise/Locale/ja.pm \
-	lib/Time/Duration/Concise/Locale/pl.pm \
-	lib/Time/Duration/Concise/Localize.pm
+	lib/Time/Duration/Concise/Locale/fr.pm
 	$(NOECHO) $(POD2MAN) --section=3 --perm_rw=$(PERM_RW) \
+	  lib/Time/Duration/Concise/Locale/hi.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::hi.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/pl.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::pl.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/ru.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ru.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/pt.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::pt.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/ar.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ar.$(MAN3EXT) \
+	  lib/Time/Duration/Concise.pm $(INST_MAN3DIR)/Time::Duration::Concise.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Localize.pm $(INST_MAN3DIR)/Time::Duration::Concise::Localize.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/zh_cn.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::zh_cn.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/ja.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ja.$(MAN3EXT) \
 	  lib/Time/Duration/Concise/Locale/de.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::de.$(MAN3EXT) \
+	  lib/Time/Duration/Concise/Locale/es.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::es.$(MAN3EXT) \
 	  lib/Time/Duration/Concise/Locale/id.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::id.$(MAN3EXT) \
 	  lib/Time/Duration/Concise/Locale/ms.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ms.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/zh_cn.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::zh_cn.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/ar.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ar.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/fr.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::fr.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/ru.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ru.$(MAN3EXT) \
-	  lib/Time/Duration/Concise.pm $(INST_MAN3DIR)/Time::Duration::Concise.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/pt.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::pt.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/es.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::es.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/hi.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::hi.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/ja.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::ja.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Locale/pl.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::pl.$(MAN3EXT) \
-	  lib/Time/Duration/Concise/Localize.pm $(INST_MAN3DIR)/Time::Duration::Concise::Localize.$(MAN3EXT) 
+	  lib/Time/Duration/Concise/Locale/fr.pm $(INST_MAN3DIR)/Time::Duration::Concise::Locale::fr.$(MAN3EXT) 
 
 
 
@@ -520,22 +520,22 @@ clean_subdirs :
 
 clean :: clean_subdirs
 	- $(RM_F) \
-	  $(INST_ARCHAUTODIR)/extralibs.ld core.*perl.*.? \
-	  MYMETA.json *$(OBJ_EXT) \
+	  so_locations core \
+	  core.[0-9][0-9][0-9] perl$(EXE_EXT) \
+	  core.*perl.*.? *perl.core \
+	  *$(LIB_EXT) core.[0-9][0-9][0-9][0-9] \
+	  $(INST_ARCHAUTODIR)/extralibs.all $(BASEEXT).bso \
+	  $(BASEEXT).def MYMETA.json \
+	  pm_to_blib $(BOOTSTRAP) \
+	  $(BASEEXT).exp *$(OBJ_EXT) \
 	  tmon.out perlmain.c \
-	  so_locations perl$(EXE_EXT) \
-	  $(BASEEXT).x $(MAKE_APERL_FILE) \
-	  perl $(BOOTSTRAP) \
-	  *$(LIB_EXT) core.[0-9][0-9][0-9][0-9][0-9] \
-	  core.[0-9] $(BASEEXT).bso \
-	  lib$(BASEEXT).def core.[0-9][0-9] \
-	  $(BASEEXT).exp core.[0-9][0-9][0-9] \
-	  pm_to_blib MYMETA.yml \
-	  mon.out $(BASEEXT).def \
-	  perl.exe core.[0-9][0-9][0-9][0-9] \
-	  core $(INST_ARCHAUTODIR)/extralibs.all \
-	  pm_to_blib.ts blibdirs.ts \
-	  *perl.core 
+	  core.[0-9] MYMETA.yml \
+	  perl $(INST_ARCHAUTODIR)/extralibs.ld \
+	  $(MAKE_APERL_FILE) core.[0-9][0-9][0-9][0-9][0-9] \
+	  mon.out $(BASEEXT).x \
+	  pm_to_blib.ts lib$(BASEEXT).def \
+	  core.[0-9][0-9] blibdirs.ts \
+	  perl.exe 
 	- $(RM_RF) \
 	  blib Time-Duration-Concise-Localize-* 
 	- $(NOECHO) $(RM_F) $(MAKEFILE_OLD)
@@ -551,7 +551,7 @@ realclean_subdirs :
 # Delete temporary files (via clean) and also delete dist files
 realclean purge ::  clean realclean_subdirs
 	- $(RM_F) \
-	  $(MAKEFILE_OLD) $(FIRST_MAKEFILE) 
+	  $(FIRST_MAKEFILE) $(MAKEFILE_OLD) 
 	- $(RM_RF) \
 	  $(DISTVNAME) 
 
@@ -593,7 +593,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) 'resources:' >> META_new.yml
 	$(NOECHO) $(ECHO) '  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize' >> META_new.yml
 	$(NOECHO) $(ECHO) '  homepage: https://github.com/binary-com/perl-Time-Duration-Concise-Localize' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version: 2.2' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version: 2.3' >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
 	$(NOECHO) $(ECHO) Generating META.json
 	$(NOECHO) $(ECHO) '{' > META_new.json
@@ -651,7 +651,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '      },' >> META_new.json
 	$(NOECHO) $(ECHO) '      "homepage" : "https://github.com/binary-com/perl-Time-Duration-Concise-Localize"' >> META_new.json
 	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "version" : "2.2"' >> META_new.json
+	$(NOECHO) $(ECHO) '   "version" : "2.3"' >> META_new.json
 	$(NOECHO) $(ECHO) '}' >> META_new.json
 	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
 
@@ -960,7 +960,7 @@ ppd :
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Module::Pluggable" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="POSIX::" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Tie::Hash::LRU" />' >> $(DISTNAME).ppd
-	$(NOECHO) $(ECHO) '        <REQUIRE VERSION="1.27" NAME="Time::Seconds" />' >> $(DISTNAME).ppd
+	$(NOECHO) $(ECHO) '        <REQUIRE NAME="Time::Seconds" VERSION="1.27" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="i386-linux-thread-multi-5.18" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> $(DISTNAME).ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> $(DISTNAME).ppd
@@ -972,19 +972,19 @@ ppd :
 pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 	$(NOECHO) $(ABSPERLRUN) -MExtUtils::Install -e 'pm_to_blib({@ARGV}, '\''$(INST_LIB)/auto'\'', q[$(PM_FILTER)], '\''$(PERM_DIR)'\'')' -- \
 	  lib/Time/Duration/Concise/Locale/es.pm blib/lib/Time/Duration/Concise/Locale/es.pm \
-	  lib/Time/Duration/Concise/Locale/pt.pm blib/lib/Time/Duration/Concise/Locale/pt.pm \
-	  lib/Time/Duration/Concise/Locale/hi.pm blib/lib/Time/Duration/Concise/Locale/hi.pm \
-	  lib/Time/Duration/Concise/Localize.pm blib/lib/Time/Duration/Concise/Localize.pm \
-	  lib/Time/Duration/Concise/Locale/ja.pm blib/lib/Time/Duration/Concise/Locale/ja.pm \
-	  lib/Time/Duration/Concise/Locale/pl.pm blib/lib/Time/Duration/Concise/Locale/pl.pm \
-	  lib/Time/Duration/Concise/Locale/id.pm blib/lib/Time/Duration/Concise/Locale/id.pm \
 	  lib/Time/Duration/Concise/Locale/de.pm blib/lib/Time/Duration/Concise/Locale/de.pm \
+	  lib/Time/Duration/Concise/Locale/id.pm blib/lib/Time/Duration/Concise/Locale/id.pm \
 	  lib/Time/Duration/Concise/Locale/ms.pm blib/lib/Time/Duration/Concise/Locale/ms.pm \
-	  lib/Time/Duration/Concise/Locale/zh_cn.pm blib/lib/Time/Duration/Concise/Locale/zh_cn.pm \
-	  lib/Time/Duration/Concise/Locale/ar.pm blib/lib/Time/Duration/Concise/Locale/ar.pm \
 	  lib/Time/Duration/Concise/Locale/fr.pm blib/lib/Time/Duration/Concise/Locale/fr.pm \
+	  lib/Time/Duration/Concise/Locale/pl.pm blib/lib/Time/Duration/Concise/Locale/pl.pm \
+	  lib/Time/Duration/Concise/Locale/hi.pm blib/lib/Time/Duration/Concise/Locale/hi.pm \
+	  lib/Time/Duration/Concise/Locale/pt.pm blib/lib/Time/Duration/Concise/Locale/pt.pm \
 	  lib/Time/Duration/Concise/Locale/ru.pm blib/lib/Time/Duration/Concise/Locale/ru.pm \
-	  lib/Time/Duration/Concise.pm blib/lib/Time/Duration/Concise.pm 
+	  lib/Time/Duration/Concise/Locale/ar.pm blib/lib/Time/Duration/Concise/Locale/ar.pm \
+	  lib/Time/Duration/Concise.pm blib/lib/Time/Duration/Concise.pm \
+	  lib/Time/Duration/Concise/Locale/ja.pm blib/lib/Time/Duration/Concise/Locale/ja.pm \
+	  lib/Time/Duration/Concise/Localize.pm blib/lib/Time/Duration/Concise/Localize.pm \
+	  lib/Time/Duration/Concise/Locale/zh_cn.pm blib/lib/Time/Duration/Concise/Locale/zh_cn.pm 
 	$(NOECHO) $(TOUCH) pm_to_blib
 
 
