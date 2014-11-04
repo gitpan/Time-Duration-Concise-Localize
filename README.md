@@ -1,7 +1,65 @@
-Time-Duration-Concise-Localize
+**Time-Duration-Concise-Localize**
 
-The Time::Duration::Concise::Localize module provides a localization framework
-for time durations.
+Time::Duration::Concise::Localize is an another time utility, which converts your concise time string to time duration and it also localize it in your language.
+
+This module uses Time::Duration::Concise as base module to convert concise string to duration
+
+
+[![Build Status](https://travis-ci.org/binary-com/perl-Time-Duration-Concise-Localize.svg?branch=master)](https://travis-ci.org/binary-com/perl-Time-Duration-Concise-Localize)
+[![Coverage Status](https://coveralls.io/repos/binary-com/perl-Time-Duration-Concise-Localize/badge.png?branch=master)](https://coveralls.io/r/binary-com/perl-Time-Duration-Concise-Localize?branch=master)
+[![Gitter chat](https://badges.gitter.im/binary-com/perl-Time-Duration-Concise-Localize.png)](https://gitter.im/binary-com/perl-Time-Duration-Concise-Localize)
+
+NOTE
+
+Our concise time interval can also have decimal values
+
+example:
+
+    1.5h
+    1d3.5h10s
+
+
+SYNOPSIS
+
+    use Time::Duration::Concise::Localize;
+
+    my $duration = Time::Duration::Concise::Localize->new(
+
+        # concise time interval
+        'interval' => '1.5h',
+
+        # Local in which string will be translated
+        'locale' => 'hi',
+
+    );
+
+    # gets you localized time duration string
+    $duration->as_string;
+
+    # In Arabic
+    $duration->locale('ar');
+    $duration->as_string();
+
+    # In Chinese - China
+    $duration->locale('zh_cn');
+    $duration->as_string();
+
+    ...
+
+CONCISE FORMAT
+
+The format is an integer followed immediatley by its duration identifier.  White-space will be ignored.
+    
+  The following table explains the format.
+
+    | identifier | duration |
+    |------------|----------|
+    | d          | day      |
+    | h          | hour     |
+    | m          | minute   |
+    | s          | second   |
+    
+
 
 INSTALLATION
 
@@ -18,6 +76,7 @@ After installing, you can find documentation for this module with the
 perldoc command.
 
     perldoc Time::Duration::Concise::Localize
+    perldoc Time::Duration::Concise
 
 You can also look for information at:
 
@@ -26,12 +85,15 @@ You can also look for information at:
 
     AnnoCPAN, Annotated CPAN documentation
         http://annocpan.org/dist/Time-Duration-Concise-Localize
+        http://annocpan.org/dist/Time-Duration-Concise
 
     CPAN Ratings
         http://cpanratings.perl.org/d/Time-Duration-Concise-Localize
+        http://cpanratings.perl.org/dist/Time-Duration-Concise
 
     Search CPAN
         http://search.cpan.org/dist/Time-Duration-Concise-Localize/
+        http://search.cpan.org/dist/Time-Duration-Concise
 
 
 LICENSE AND COPYRIGHT
